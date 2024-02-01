@@ -17,5 +17,5 @@ int main(){
         total = 25 + 75 + 120 + (a-250)*1.50 ;
     }
     float total_with_surcharge = total + (total*20/100) ;
-    printf("Total electricity bill: %f",total_with_surcharge);
+    printf("Total electricity bill = %f",total_with_surcharge);
 }
