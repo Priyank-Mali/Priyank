@@ -15,15 +15,13 @@
  int main(){
     int choice;
     float a,b;
-    time_t exit_time;
-    exit_time = time(NULL) + 4.606 ;
     printf("---------------MENU---------------\n");
     printf("1. Addition\n");
     printf("2. Subtraction\n");
     printf("3. Multiplication\n");
     printf("4. Division\n");
 
-    while(time(NULL)<exit_time){
+    if(choice<=4){
         printf("\nEnter your choice: ");
         scanf("%d",&choice);
     
