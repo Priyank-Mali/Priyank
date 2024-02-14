@@ -14,59 +14,65 @@ int main(){
         }
     }
     printf("Array1: ");
-     for(row=0;row<3;row++){
         printf("\n");
+     for(row=0;row<3;row++){
         for(col=0;col<3;col++){
             printf("%d ",arr1[row][col]);
         }
+        printf("\n");
     }
     printf("\nArray2: ");
-     for(row=0;row<3;row++){
+    
         printf("\n");
+     for(row=0;row<3;row++){
         for(col=0;col<3;col++){
             printf("%d ",arr2[row][col]);
         }
+        printf("\n");
     }
     printf("\n addition of array1 and array2 : ");
-    for(row=0;row<3;row++){
+    
         printf("\n");
+    for(row=0;row<3;row++){
         for(col=0;col<3;col++){
            sum[row][col] = arr1[row][col] + arr2[row][col] ;
         }
     }
     for(row=0;row<3;row++){
-        printf("\n");
         for(col=0;col<3;col++){
             printf("%d ",sum[row][col]);
         }
+        printf("\n");
     }
     printf("\n subtraction of array1 and array2 : ");
-    for(row=0;row<3;row++){
         printf("\n");
+    for(row=0;row<3;row++){
         for(col=0;col<3;col++){
            sub[row][col] = arr1[row][col] - arr2[row][col] ;
         }
     }
     for(row=0;row<3;row++){
-        printf("\n");
         for(col=0;col<3;col++){
             printf("%d ",sub[row][col]);
         }
+        printf("\n");
     }
      printf("\n multiplication of array1 and array2 : ");
+        printf("\n");
     for(row=0;row<3;row++){
         for(col=0;col<3;col++){
             mul[row][col]=0;
-            for(int k=0;k<col;k++){
-                mul[row][col]+= arr1[row][k]*arr2[k][col];
+            for(int k=0;k<3;k++){
+                mul[row][col] += arr1[row][k]*arr2[k][col];
             }
          }
     }
+    printf("\n");
     for(row=0;row<3;row++){
-        printf("\n");
         for(col=0;col<3;col++){
             printf("%d ",mul[row][col]);
         }
+        printf("\n");
     }
    
 
