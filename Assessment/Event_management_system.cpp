@@ -1,44 +1,67 @@
 #include<iostream>
 using namespace std;
 
-int numberof_guest;
-void no_of_server(){
-    return numberof_guest / 20 ;
-}
 class event{
 public:
     string event_name;
     string customer_name;
+    double numberof_guest;
     int numberof_minutes;
-    void input_name(){
+
+    void input_data(){
+        cout<<"*****************|| Event Management System ||**************"<<endl;
         cout<<"Enter the name of event: ";
         cin>>event_name;
         cout<<"Enter the customer's First and Last name: ";
-        cin>>customer_name;
-        cout<<"Enter number of guest: ";
+        cin.ignore();
+        getline(cin,customer_name);
+        cout<<"Enter number of guests: ";
         cin>>numberof_guest;
         cout<<endl;
         cout<<"Enter the number of minutes in the Event: ";
         cin>>numberof_minutes;
-    }
-};
-void ceil(){
-    const double costperhour = 18.50;
-    const double costperminute = 0.40;
-    const double costofdinner = 20.70;
-    double Cost1 = (numberof_minute / 60) * costperhour;
-    double Cost2 = (NumberOfMinutes % 60) * CostPerMinute;
-    CostForOneServer = Cost1 + Cost2;
-}
-class rate : public event{
-public:
-    void cost_of_one_server(){
-        ceil();
         
     }
-    
 };
+
+class cost: public event {
+public:
+    double Cost1;
+    double Cost2;
+    double total_food;
+    double cost_of_one_server;
+    int numberof_server;
+    double avg_cost;
+    double totalcost;
+    
+    void calculate_cost() {
+        Cost1 = (numberof_minutes / 60) * 18.50;
+        Cost2 = (numberof_minutes % 60) * 0.40;
+        total_food = numberof_guest * 20.70 ;
+        cost_of_one_server = Cost1 + Cost2 ;   
+        numberof_server = numberof_guest / 20 ;
+        avg_cost = total_food / numberof_guest ;
+        totalcost = total_food + ((Cost1 + Cost2) * numberof_server);
+    }
+    
+    void display(){
+        cout<<"===================Event Estiment for:"<<customer_name<<"================"<<endl;
+        cout<<"Number of servers: "<<numberof_server<<endl;
+        cout<<"The cost for servers: "<<cost_of_one_server<<endl;
+        cout<<"The cost for Food is: "<<total_food<<endl;
+        cout<<"Average cost per person: "<<avg_cost<<endl;
+        cout<<endl;
+        cout<<"Total cost is: "<<totalcost<<endl;
+        cout<<"Please deposit 25% amount to reserve the event: "<<endl;
+        cout<<"The deposit needed is: "<<totalcost*(1.0/4);
+    }
+};
+
 int main(){
+    cost p;
+    p.input_data();
+    p.calculate_cost();
+    p.display();
     
     return 0;
 }
