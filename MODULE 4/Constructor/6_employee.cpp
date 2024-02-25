@@ -7,10 +7,7 @@ private:
     string name;
     int salary;
 public:
-    Employee(int pid,string n,int s){
-        id = pid;
-        name = n;
-        salary = s;
+    Employee(){
         cout<<"Enter employee ID: ";
         cin>>id;
         cout<<"Enter employee name: ";
@@ -29,9 +26,7 @@ public:
 
 };
 int main(){
-    int id,sa;
-    string n;
-    Employee p(id,n,sa);
+    Employee p;
     p.performance();
     return 0;
 }

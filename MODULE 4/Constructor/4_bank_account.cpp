@@ -6,9 +6,7 @@ private:
     int number;
     int balance;
 public:
-    void setdata(int n,int b){
-        number = n;
-        balance = b;
+    void setdata(){
         cout<<"Enter Account number: ";
         cin>>number;
         cout<<"Enter Balance: ";
@@ -27,10 +25,8 @@ public:
 
 };
 int main(){
-    int n;
-    int b;
     Bank p;
-    p.setdata(n,b);
+    p.setdata();
     p.with_draw();
     p.rem_balance();
 

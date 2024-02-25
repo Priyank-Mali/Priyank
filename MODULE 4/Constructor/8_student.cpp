@@ -7,11 +7,7 @@ private:
     int roll_number;
     int marks;
 public:
-    void setdata(string n,int r,int m){
-        name = n;
-        roll_number = r;
-        marks = m;
-
+    void setdata(){
         cout<<"Enter name: ";
         cin.ignore();
         getline(cin,name);
@@ -32,10 +28,8 @@ public:
 
 };
 int main(){
-    int r,m;
-    string n;
     Student s1;
-    s1.setdata(n,r,m);
+    s1.setdata();
     s1.dispaly();
     return 0;
 }

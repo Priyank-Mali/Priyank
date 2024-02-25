@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 class calculator{
-public:
+private:
      float a,b;      
 public:
     void res(){
@@ -27,10 +27,10 @@ public:
 };
 int main(){
     calculator p;
-    char op;
+    char operater;
     cout<<"Enter operator: ";
-    cin>>op;
-    switch(op){
+    cin>>operater;
+    switch(operater){
         case '+' : p.res(); cout<<"Addition: "<<p.sum();break;
         case '-' : p.res(); cout<<"Subtraction: "<<p.sub();break;
         case '*' : p.res(); cout<<"Multiplication: "<<p.mul();break;

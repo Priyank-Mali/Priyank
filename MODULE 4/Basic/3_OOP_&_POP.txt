@@ -1,0 +1,4 @@
+-->programming for commercial solution was hard job with
+   structural programming (c language),
+-->because programmer need to manage logic and data.
+-->so,to resolve real world issues  why class is important.

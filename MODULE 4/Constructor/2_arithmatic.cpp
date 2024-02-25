@@ -4,12 +4,8 @@ class Addition{
 private:
     int a,b;
 public:
-    Addition(int a1,int b1){
-        a = a1;
-        b = b1;
-    }
-    int add(){
-        return a+b;
+    Addition(){
+        //return a+b;
     }
 };
 
@@ -19,7 +15,7 @@ int main(){
     cin>>a;
     cout<<"Enter number b: ";
     cin>>b;
-    Addition Add(a,b);
-    cout<<"Addition of number is: "<<Add.add();
+    Addition Add();
+    //cout<<"Addition of number is: "<<Add.add();
     return 0;
 }

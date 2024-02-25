@@ -4,9 +4,11 @@ class Rectangle{
 private:
     int length,width;
 public:
-    void setdata(int l,int w){
-        length = l;
-        width = w;
+    void setdata(){
+    cout<<"Enter reactangle length: ";
+    cin>>length;
+    cout<<"Enter reactangle width: ";
+    cin>>width;    
     }
     int perimeter(){
         return 2*(length + width);
@@ -16,13 +18,9 @@ public:
     }
 };
 int main(){
-    int len,wid;
-    cout<<"Enter reactangle length: ";
-    cin>>len;
-    cout<<"Enter reactangle width: ";
-    cin>>wid;
+   
     Rectangle r;
-    r.setdata(len,wid);
+    r.setdata();
     cout<<"Perimeter of rectagle is: "<<r.perimeter()<<endl;
     cout<<"Area of rectangle is: "<<r.area();
     return 0;

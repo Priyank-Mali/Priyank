@@ -10,6 +10,7 @@
                       when class is defined no memory is allocated.
 
  -> Objects         : to use the data and access function defined in class, we need objects.
+                      to holds data.
  -> Encapsulation   :
  -> Abstraction     :
  -> Polymorphism    :

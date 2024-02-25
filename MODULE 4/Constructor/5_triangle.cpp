@@ -6,8 +6,7 @@ private:
     int side2;
     int side3;
 public:
-    void setdata(int s1,int s2,int s3){
-        side1 = s1,side2 = s2,side3 = s3;
+    void setdata(){
         cout<<"Enter first side: ";
         cin>>side1;
         cout<<"Enter second side: ";
@@ -28,8 +27,7 @@ public:
 };
 int main(){
     Triangle T;
-    int s1,s2,s3;
-    T.setdata(s1,s2,s3);
+    T.setdata();
     T.check();
     return 0;
 }

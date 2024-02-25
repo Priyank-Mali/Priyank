@@ -5,8 +5,9 @@ class circle{
 private: 
     float radius;
 public:
-    void setdata(float r){
-        radius = r;
+    void setdata(){
+        cout<<"Enter circle radius: ";
+        cin>>radius;
     }
     float circumference(){
         return 2*pi*radius;
@@ -16,11 +17,8 @@ public:
     }
 };
 int main(){
-    float r;
-    cout<<"Enter circle radius: ";
-    cin>>r;
     circle c;
-    c.setdata(r);
+    c.setdata();
     cout<<"Circumference of circle is: "<<c.circumference()<<endl;
     cout<<"Area od circle is: "<<c.area();
 

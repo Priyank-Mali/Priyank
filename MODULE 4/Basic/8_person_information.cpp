@@ -6,14 +6,12 @@ private:
     string name;
     string country;
 public:
-    void setdata(int a,string n,string c){
-        age  = a;
-        name = n;
-        country = c;
+    void setdata(){
         cout<<"Enter your age: ";
         cin>>age;
         cout<<"Enter your name: ";
-        cin>>name;
+        cin.ignore();
+        getline(cin,name);
         cout<<"Enter which country you from: ";
         cin>>country;
     }
@@ -25,9 +23,7 @@ public:
 };
 int main(){
     Person p;
-    int a;
-    string n,c;
-    p.setdata(a, n, c);
+    p.setdata();
     p.getdata();
     return 0;
 }

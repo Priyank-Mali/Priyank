@@ -5,12 +5,10 @@ class Date{
 private:
     int day;
     int month;
+    
     int year;
 public:
-    Date(int d,int m,int y){
-        day = d;
-        month = m;
-        year = y;
+    Date(){
         cout<<"Enter a date: ";
         cin>>day;
         cout<<"Enter a month: ";
@@ -41,8 +39,7 @@ public:
 
 };
 int main(){
-    int d,m,y;
-    Date d1(d,m,y);
+    Date d1;
     d1.check();
     return 0;
 }

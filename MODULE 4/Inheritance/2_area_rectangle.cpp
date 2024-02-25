@@ -11,12 +11,16 @@ public:
         cout << "Enter width of rectangle: ";
         cin >> width;
     }
-};
-class area : public rectangle{
-    int area1(){
-        return length * width ;
+    int getdata(){
+        return length*width;
     }
 };
+class area : public rectangle{
+
+};
 int main(){
+    area a;
+    a.setdata();
+    cout<<"Area of rectangle: "<<a.getdata();
     return 0;
 }

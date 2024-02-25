@@ -1,12 +1,13 @@
 #include<iostream>
 using namespace std;
 class bank{
-public:
+private:
     string name;
     int number;
     string type;
     int balance;
 
+public:
     void get_data(){
         cout<<"Name of the depositer: ";
         cin.ignore();

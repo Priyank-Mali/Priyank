@@ -7,10 +7,7 @@ private:
     string model;
     int year;
 public:
-    void setdata(string c,string m,int y){
-        company = c;
-        model = m;
-        year = y;
+    void setdata(){
         cout<<"Enter name of car company: ";
         cin>>company;
         cout<<"Enter model of car: ";
@@ -26,9 +23,7 @@ public:
 };
 int main(){
     Car c1;
-    string c,m;
-    int y;
-    c1.setdata(c,m,y);
+    c1.setdata();
     c1.getdata();
     return 0;
 }
