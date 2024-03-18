@@ -1,23 +1,39 @@
-#include <iostream>
-#include <string.h>
+#include<iostream>
+#include<string>
 using namespace std;
 
-class AddString {
+class MyString {
+private:
+    string str;
+
 public:
-    char s1[10], s2[10];
-    AddString(char str1[], char str2[]) {
-        strcpy(this->s1, str1);
-        strcpy(this->s2, str2);
+
+    MyString(string s) : str(s) {}
+
+    MyString operator+(const MyString& other) {
+        return MyString(str + other.str);
     }
-    void operator+() {
-        cout << "\nConcatenation: " << strcat(s1, s2);
+
+    void display() {
+        cout << "Concatenated string: " << str << endl;
     }
 };
 
 int main() {
-    char str1[] = "Geeks";
-    char str2[] = "ForGeeks";
-    AddString a1(str1, str2);
-    +a1;
+    string str1, str2;
+
+    cout << "Enter the first string: ";
+    getline(cin, str1);
+
+    cout << "Enter the second string: ";
+    getline(cin, str2);
+
+    MyString obj1(str1);
+    MyString obj2(str2);
+
+    MyString concatenatedString = obj1 + obj2;
+
+    concatenatedString.display();
+
     return 0;
 }
