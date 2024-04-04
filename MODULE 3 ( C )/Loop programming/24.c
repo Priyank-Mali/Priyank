@@ -1,12 +1,15 @@
 #include<stdio.h>
+
+// 1 + 2 + 3 + 4 + 5 + ... + n  
+
 int main(){
-    int a;
-    printf("Enter a number: ");
-    scanf("%d",&a);
-    for(int i=1;i<=a;i++){
-        printf("%d",i);
-        if(i<a){
-            printf(" + ");
+    int num;
+    printf("Enter range: ");
+    scanf("%d",&num);
+    for(int i=1;i<=num;i++){
+        printf("%d ",i);
+        if(i<num){
+            printf("+ ");
         }
     }
 }
